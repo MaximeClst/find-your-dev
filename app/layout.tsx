@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Footer } from "./components/Footer";
 import Nav from "./components/Nav";
 import "./globals.css";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <Nav />
           {children}
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
