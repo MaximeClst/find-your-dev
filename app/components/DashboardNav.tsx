@@ -9,7 +9,7 @@ export default function DashboardNav() {
     { name: "Settings", icon: IoMdSettings, path: "/dashboard/settings" },
   ];
   return (
-    <nav className="p-2">
+    <nav>
       <ul className="mb-4">
         {menuDashboard.map((item, index) => (
           <Link

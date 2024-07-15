@@ -1,6 +1,7 @@
 "use server";
 
 import { prisma } from "@/db/db";
+import { redirect } from "next/navigation";
 
 export const addUser = async (
   clerkUserId: string,
@@ -40,4 +41,41 @@ export const getUser = async (clerkUserId: string) => {
     console.error("An error occurred when trying to retrieve the user", error);
     throw error;
   }
+};
+
+export const updateUser = async (formData: FormData) => {
+  try {
+    const userJob = formData.get("userJob") as string;
+    const userDescription = formData.get("userDescription") as string;
+    const userWebsite = formData.get("userWebsite") as string;
+    const userYoutube = formData.get("userYoutube") as string;
+    const userInstagram = formData.get("userInstagram") as string;
+    const id = formData.get("id") as string;
+
+    if (id !== null) {
+      await prisma.user.update({
+        where: { id },
+        data: {
+          userJob: userJob,
+          userDescription: userDescription,
+          userWebsite: userWebsite,
+          userYoutube: userYoutube,
+          userInstagram: userInstagram,
+        },
+      });
+    }
+  } catch (error) {
+    console.error("An error occurred when modifying the user", error);
+  } finally {
+    redirect("/dashboard/home");
+  }
+};
+
+export const getAllUsers = async () => {
+  const allUsers = await prisma.user.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+  return allUsers;
 };
