@@ -16,7 +16,7 @@ export default async function HomeDashboard() {
 
       <div className="max-w-[1000] w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {dataUsers.map((user, index) => (
-          <Link key={index} href={`dashboard/profil/${user?.clerkUserId}`}>
+          <Link key={index} href={`/dashboard/profil/${user?.clerkUserId}`}>
             <div className="border border-gray-300 rounded-md p-3 shadow-md flex justify-center items-center flex-col hover:translate-y-[-10px] transition-all">
               <Image
                 src={user?.userImage as string}

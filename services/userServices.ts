@@ -48,8 +48,8 @@ export const updateUser = async (formData: FormData) => {
     const userJob = formData.get("userJob") as string;
     const userDescription = formData.get("userDescription") as string;
     const userWebsite = formData.get("userWebsite") as string;
-    const userYoutube = formData.get("userYoutube") as string;
-    const userInstagram = formData.get("userInstagram") as string;
+    const userLinkedin = formData.get("userLinkedin") as string;
+    const userTwitter = formData.get("userTwitter") as string;
     const id = formData.get("id") as string;
 
     if (id !== null) {
@@ -59,8 +59,8 @@ export const updateUser = async (formData: FormData) => {
           userJob: userJob,
           userDescription: userDescription,
           userWebsite: userWebsite,
-          userYoutube: userYoutube,
-          userInstagram: userInstagram,
+          userLinkedin: userLinkedin,
+          userTwitter: userTwitter,
         },
       });
     }

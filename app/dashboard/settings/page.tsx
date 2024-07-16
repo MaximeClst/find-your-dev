@@ -82,25 +82,25 @@ export default async function PageSettings() {
           type="url"
           defaultValue={data?.userWebsite as string}
         />
-        <label htmlFor="userYoutube" className="text-sm">
-          Youtube :
+        <label htmlFor="userLinkedin" className="text-sm">
+          Linkedin :
         </label>
         <input
-          id="userYoutube"
-          name="userYoutube"
+          id="userLinkedin"
+          name="userLinkedin"
           className="h-12 p-3 rounded-md border border-gray-300 text-black"
           type="url"
-          defaultValue={data?.userYoutube as string}
+          defaultValue={data?.userLinkedin as string}
         />
-        <label htmlFor="userInstagram" className="text-sm">
-          Instagram :
+        <label htmlFor="userTwitter" className="text-sm">
+          Twitter :
         </label>
         <input
-          id="userInstagram"
-          name="userInstagram"
+          id="userTwitter"
+          name="userTwitter"
           className="h-12 p-3 rounded-md border border-gray-300 text-black"
           type="url"
-          defaultValue={data?.userInstagram as string}
+          defaultValue={data?.userTwitter as string}
         />
         <div className="flex justify-center py-3 gap-4">
           <button className="bg-blue-500 hover:bg-blue-600 p-3 rounded-md">

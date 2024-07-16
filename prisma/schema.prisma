@@ -20,8 +20,8 @@ model User {
   userImage       String?
   userDescription String?
   userWebsite     String?
-  userYoutube     String?
-  userInstagram   String?
+  userTwitter     String?
+  userLinkedin    String?
   userJob         String?
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt

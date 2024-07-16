@@ -7,7 +7,7 @@ CREATE TABLE "User" (
     "userDescription" TEXT,
     "userWebsite" TEXT,
     "userYoutube" TEXT,
-    "userInstagram" TEXT,
+    "userTwitter" TEXT,
     "userJob" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
